@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            douglas cheong
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.35">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script src="../js/pic.js"></script>
+    </head>
+    <body>
+        <div class="pic">
+            <img src="../img/portfolio/hemt/hexinside.jpg">
+            <div class="gradient"></div>
+            <span><h1>HEMT Gas Sensor</h1></span>
+        </div>
+        <div id="main">
+            <div id="header">
+            </div>
+                <p>In Metz, France, I was part of a research team developing a prototype gas sensor for use in the vehicle industry. We sought to address the problem of car manufacturers not properly testing for harmful oxides. My tasks in this project ranged over both hardware and software. Using Autodesk Inventor, I modeled a precise replica of existing vehicle oxygen gas sensors, drafting multiple designs that took into account heat flux and sensor preservation. For presentation, I utilized 3DSMAX and the iray renderer to produce realistic images and animations of our product.</p>
+                <img src="../img/portfolio/hemt/sensorpieces.jpg">
+                <p>Some of the final designs</p>
+                <p>On the software side of things, our project aimed to be practical and inexpensive - a product that would be cheap compared to current gas sensors used in the industry. To accomplish this, we linked two Arduino Micros in a master-slave, I2C configuration that communicated with a more powerful Raspberry Pi via serial. Over the course of the project, I was in charge of debugging our existing Arduino code (taking care of synchronization and queue clearing), as well as writing data harvesting scripts in Python. </p> 
+                <p>To aid in sample recognition, I replicated multiple signal smoothing and curve fitting functions (notably OriginLab's FFT smoothing filter) as well as added real-time graphing capability to the Raspberry Pi.</p>
+                <img src="../img/portfolio/hemt/figure_1.png">
+                <p>A sample dataset smoothed with the optimized FFT filter in real time</p>
+        </div>
+    </body>
+</html>

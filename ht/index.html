@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            douglas cheong
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.35">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script src="../js/pic.js"></script>
+    </head>
+    <body>
+        <div class="pic">
+            <img src="../img/portfolio/ht/header.jpg">
+            <div class="gradient"></div>
+            <span><h1>Child Health Tracker</h1></span>
+        </div>
+        <div id="main">
+            <div id="header">
+            </div>
+                <p>This project began after I was contacted by a researcher at Emory to develop an Android application for Wuqu' Kawoq, a Guatemalan organization aiming to improve the quality of life for native Mayan communities. With the goal of digitizing and optimizing the current paper system in place, the app had to be able to provide a way to track the growth of child patients, and alert healthcare workers should the need arise.</p>
+                <img class="long" src="../img/portfolio/ht/login.png">
+                <p>The login screen</p>
+                <p>The app tracks the growth of children via their z-scores, plotting their growth curves visually against the population averages. Using this data, the app is able to notify health workers about worrying trends, and whether a child might be malnutritioned. By both storing and analyzing data, the app aims to replace the current paper cataloging methods in use, as well as provide focused communication between medical staff throughout Guatemala. Using SQLite3, the application is able to quickly record new patients, search for patients with multiple specifications, and efficiently upload to existing online databases (though the planned online format is to be OpenMRS).</p> 
+                <img class="long" src="../img/portfolio/ht/patient.png">
+                <p>The patient view page - via the fragments in the Activity one can swipe to view graphs, growth history tables, and notes</p>
+                <img class="long" src="../img/portfolio/ht/notes.png">
+                <p>The notes fragment - entries are stored in an SQLite3 database</p>
+                <h1>What's Next</h1>
+                <p>The Wuqu' Kawoq app is still a work in progress - its fate rests on demand, though much of its features are complete. If the project is greenlit, I hope to implement online functionality with OpenMRS (currently the app is entirely offline), a messaging system, and a geographical patient map. Stay tuned for more updates! Alternatively, you can view the project on github <a href="http://www.github.com/dcheong/HealthTracker/">here</a></p>
+        </div>
+    </body>
+</html>

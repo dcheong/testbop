@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            douglas cheong
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.35">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script src="../js/pic.js"></script>
+    </head>
+    <body>
+        <div class="pic">
+                <img src="../img/portfolio/poss/Capture.JPG">
+                <div class="gradient"></div>
+                <span><h1>Philippine One Stop Shop</h1></span>
+            </div>
+        <div id="main">
+            <div id="header"></div>
+                <p>POSS was a project conceived, undertaken, and for the most part completed over the span of 24 hours at the 2016 Fishackathon. The problem was this: fishing in the Philippines, despite making up a majority of its economic income, is highly unregulated. The lack of regulation on fishing there makes it a no-man's land for fishing, which in turn takes a heavy toll on the marine ecosystem. With there being a need for a solution that would easily provide access to fishing rules, restricted fishing zones, and other information that would be relevant for the fishing life in the Philippines, we decided to fill it with POSS - the one stop shop, the end-all, the swiss army knife.</p>
+                <img class="long" src="../img/portfolio/poss/1.png">
+                <p>The main screen of the app. On the bottom, weather!</p>
+                <p>Our first goal was accessibility - the app needed to be easy to use, regardless of background. So we made our main activity a map. Using OpenStreetMaps (as none of us were Google developers with access to their locked up Maps API), we cached an offline map of the entire Philippines. The first thing that one sees on opening the app is this map, centered on their location (provided it is available). On the map, known MPA protected zones are displayed so that one can see if they are in a restricted area. As soon as internet connection is available, the weather, and any imminent changes to it, are displayed at the bottom as a Snackbar. On the bottom right, the user is able to start a trip, upon which the app will track and plot changes to the user's location over time.</p>
+                <img class="long" src="../img/portfolio/poss/2.png">
+                <p>Our second goal was knowledge (not the Tai Lopez kind). User's needed easy access to fishing laws, especially those that were pertinent to their current area. Using an SQLite3 database that contained rules, along with the barangays (a denomination of area) in which they were in effect, one could easily filter through the rules that pertained to them. In fact, the app does it automatically, filling in search filters if the GPS location is available.</p>
+                <img class="long" src="../img/portfolio/poss/4.png">
+                <p>With the main features done, we decided to make the app a bit social. Adding share functionality was a cinch, and soon we were able to pass around trip data via other social apps.</p>
+                <h1>What's Next?</h1>
+                <p>Unfortunately, we didn't win this Fishackathon (though we totally intend to next year). Instead we got beaten by a few dudes using a Google Maps template and a skeleton MEAN stack (definitely not still salty). However, we (and up till now I've been referring to a mysterious and inclusive we, so let me clarify: myself and the team with whom I worked at this Fishackathon) still hold a lot of interest in the potential of this app, and so we've decided to work on it some more this summer. Our planned features include online integration - showing other users of the app on the map, trawling for more regulation data from the Philippines (as there is currently scant available), and putting it up on the Google Play Market. Stay tuned! Alternatively, you can view the project on github <a href="http://www.github.com/dcheong/POSS">here!</a></p>
+        </div>
+    </body>
+</html>

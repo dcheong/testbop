@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            douglas cheong
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.35">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">        <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script src="../js/pic.js"></script>
+    </head>
+    <body>
+        <div class="pic">
+                <img src="../img/portfolio/oki/oki%20screen.png">
+                <div class="gradient"></div>
+            </div>
+        <div id="main">
+            <div id="header"></div>
+            <img src="../img/portfolio/oki/oki-logo.png">
+                <p>For HackGT, I teamed up with 3 others to produce an interactive, digital soundboard powered by Kinect, Leap Motion, OpenCV, and Processing. Over the course of 48 hours, we learned and utilized the Processing Kinect and Leap Motion libraries to implement gesture recognition that would have a meaningful and interesting effect on sound.</p>
+                <img class="short" src="../img/portfolio/oki/oki-pic1.JPG">
+                <h1>Kinect post-mortem</h1>
+            <p>Our first go to for using the Kinect was with Visual Studio - making a Windows 10 app. After a few hours of trial and error, we realized that the trouble of making an app for Windows was not worth our time. It was around 1 AM that I chanced upon a <a href="https://github.com/ThomasLengeling/KinectPV2">Kinect Processing library</a> that, with only 20 lines of code, could provide us with bone information, hand position, and depth imagery. And, because it was on Processing, we could use Java. Magic. Having access to a well documented library for Kinect (as opposed to Microsoft's outdated documentation) reduced our problem of how to interface with the Kinect, to how to use all the information we were now receiving. The Kinect provides 4 different images, or <i>frames</i> - a regular color image (webcam), an infrared frame, a depth frame, and a body tracking frame (which provided us with access to detected skeletons). </p>
+                <img class="short" src="../img/portfolio/oki/oki-pic2.JPG">
+                <h1>OpenCV post-mortem</h1>
+                <p>With step 1 done (Kinect imaging), we then had to process that image to determine user gestures, such as opening and closing hands. With Kinect's body tracking frame, we only had access to a two finger representation of the hand - the only single finger that was represented was the thumb, the rest were grouped together. To figure out how many fingers a user was holding up, we decided to use OpenCV. Finding a hand from a depth image is <b>hard</b>. Luckily, we were able to manage this problem by limiting the Kinect's depth imagery to a certain minimum and maximum threshold - this could be called a 'less is more' approach. By using the known position of the hand, we could select the contour from the list of contours we were receiving to extract the hand contour. From this path, we detected fingers by looking at convexity defects compared to the convex hull. By looking at the distances from the convexity defects to the surrounding concave points, we managed to detect fingers - using this info, we implemented detection for opened and closed hands.</p>
+                <img class="short" src="../img/portfolio/oki/oki-pic3.JPG">
+                <h1>Leap Motion post-mortem</h1>
+                <p>The leap motion library was more extensive than the Kinect library - we were able to use built in gesture recognition to detect pinches, swipes, taps, and circular gestures. Interesting fact - we originally had 3 individual projects going on simultaneously up until 12 hours before deadline. One project involved the Leap Motion controller, one (mine) involved the Kinect, and another was an iPhone drummer app. In the Leap Motion project, we implemented a piano interface so that a user could play different keys using their finger positioning.</p>
+                <img src="../img/portfolio/oki/oki%20screen.png">
+                <h1>Integrations!</h1>
+                <p>With all the information taken care of, we now had to figure out how to make a meaningful, interesting, engaging project. Since we weren't doing something with big data, NLP, or machine learning, we had to have a draw. Taking advantage of Processing's graphical capabilities, I designed and built a 3D user interface akin to a DJ soundboard. A grid of 12 squares (shown above) corresponds to a unique sample. By opening and closing one's hand while it is on top of a square, the sample is started or stopped. Pushing or pulling an open hand will increase or decrease the volume of a specific sample. On the left is the reverb slider - by moving one's left hand up and down while on top of the slider, reverb can be increased or decreased. Closing both hands while on top of a specific sample will allow sample rate manipulation - stretching outwards will speed up a sample, while having both hands close together will slow it down - this allows for beatmatching.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8ocJ2V3yumQ" frameborder="0" allowfullscreen></iframe>
+                <h1>Conclusion</h1>
+                <p>With Oki, we made the top 3 at HackGT (basically we won). I'm proud of what we accomplished, especially considering our complete lack of experience with motion controllers prior to the hackathon. Since we had to give back the Kinect afterwards, we can't continue development <i class="em em-frowning"></i>. However, the entire project is on Github! If you'd like to look at the source code, or play around with it, feel free to check it <a href="https://github.com/dcheong/oki">out</a>.</p>
+        </div>
+    </body>
+</html>
