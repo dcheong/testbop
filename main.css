@@ -1,8 +1,25 @@
+@font-face {
+  font-family: BrandonGrotesque;
+  src: url("./fonts/Brandon_med.otf") format("opentype");  
+}
+
+@font-face {
+  font-family: Oxygen;
+  src: url("./fonts/Oxygen-Light.ttf");
+}
+
+@font-face {
+  font-family: Oxygen;
+  src: url("./fonts/Oxygen-Bold.ttf");
+  font-weight: bold;
+}
+
 body {
   background: white;
   position: absolute;
   height: 100%;
   width: 100%;
+  font-family: Oxygen;
 }
 
 .card {
@@ -66,11 +83,13 @@ a .card:hover {
 }
 
 .dev {
-  background-color: ghostwhite;
+  background-color: #e9e9e9;
+  border-left: dashed 4px #ffffff;
+  border-right: dashed 4px #424242;
 }
 
 .des {
-  background-color: slategray;
+  background-color: #424242;
 }
 
 .fullheight {
@@ -85,8 +104,16 @@ a .card:hover {
   color: gray;
 }
 
+.dashright {
+  border-right: dashed 4px #e9e9e9;
+}
+
+.dashleft {
+  border-left: dashed 4px #e9e9e9;
+}
+
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
   background: transparent;
 }
  
@@ -102,4 +129,8 @@ a .card:hover {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
   background: transparent;
+}
+
+.title {
+  font-family: BrandonGrotesque, sans-serif;
 }
