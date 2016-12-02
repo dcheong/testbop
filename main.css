@@ -89,7 +89,8 @@ a .card:hover {
 }
 
 .des {
-  background-color: #424242;
+  /*background-color: #424242;*/
+  background-image: url("./img/bg.jpg");
 }
 
 .fullheight {
@@ -102,6 +103,18 @@ a .card:hover {
 
 .light {
   color: gray;
+}
+
+.yellow {
+  color: #FFC107;
+}
+
+.indigo {
+  color: #3F51B5;
+}
+
+.green {
+  color: #8BC34A;
 }
 
 .dashright {
